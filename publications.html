@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Publications - Justin Benoist</title>
+  <link rel="stylesheet" href="css/index.css">
+
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="../js/fontawesome.all.min.js"></script>
+  <script defer src="../js/bulma-carousel.min.js"></script>
+  <script defer src="../js/bulma-slider.min.js"></script>
+  <script defer src="../js/index.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Neural Progressive Photon Mapping",
+    "description": "Efficient kernel prediction for progressive density estimation",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Justin Benoist",
+        "url": "https://justinbenoist.github.io/"
+      },
+      {
+        "@type": "Person",
+        "name": "Joey Litalien"
+      },
+      {
+        "@type": "Person",
+        "name": "Adrien Gruson"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "École de Technologie Supérieure",
+      "url": "https://www.kit.edu"
+    },
+    "datePublished": "2026",
+    "isPartOf": {
+      "@type": "Periodical",
+      "name": "Computer Graphics Forum",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Eurographics"
+      }
+    }
+  }
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".publication[data-href]").forEach(article => {
+        article.addEventListener("click", event => {
+          // Ignore clicks on actual links
+          if (event.target.closest("a")) return;
+
+          window.location.href = article.dataset.href;
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <div class="header-grid">
+        <img src="imgs/me.jpg" alt="Photo of Justin Benoist" class="profile-photo">
+
+        <div class="header-text">
+          <h1>Justin Benoist</h1>
+          <p class="header-role">PhD Student in Computer Graphics</p>
+          <p class="header-affiliation">École de technologie supérieure</p>
+        </div>
+
+        <nav class="site-nav">
+          <a href="index.html">About</a>
+          <a href="publications.html" class="active">Publications</a>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="publications-main">
+    <h2>Publications</h2>
+    <section class="publications-list">
+      <article class="publication" data-href="publications/nppm.html">
+        <figure class="teaser">
+          <a href="publications/nppm.html">
+            <img src="publications/imgs/nppm-teaser.jpg"
+                alt="Teaser showing caustics reconstruction result">
+          </a>
+        </figure>
+        <h3>
+          Neural Progressive Photon Mapping
+        </h3>
+        <p>
+          <strong>Justin Benoist</strong>, Joey Litalien, Adrien Gruson<br>
+          <em>EUROGRAPHICS</em>, 2026
+        </p>
+        <p>
+          <a href="https://github.com/JustinBenoist/photon_mapper" class="button is-rounded">Code repository</a>
+        </p>
+      </article>
+
+      <!-- Other articles will go here -->
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-name">Justin Benoist</p>
+
+      <div class="footer-icons">
+        <a href="mailto:justin.benoist.1@ens.etsmtl.ca" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/justin-benoist/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/JustinBenoist" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <p class="footer-affiliation">
+        École de technologie supérieure · Montréal
+      </p>
+      <p class="footer-license">
+         This page was built using a custom version of the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+         This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+          Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

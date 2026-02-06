@@ -3,30 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <title>Justin Benoist</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="../js/fontawesome.all.min.js"></script>
+  <script defer src="../js/bulma-carousel.min.js"></script>
+  <script defer src="../js/bulma-slider.min.js"></script>
+  <script defer src="../js/index.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Neural Progressive Photon Mapping",
+    "description": "Efficient kernel prediction for progressive density estimation",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Justin Benoist",
+        "url": "https://justinbenoist.github.io/"
+      },
+      {
+        "@type": "Person",
+        "name": "Joey Litalien"
+      },
+      {
+        "@type": "Person",
+        "name": "Adrien Gruson"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "École de Technologie Supérieure",
+      "url": "https://www.kit.edu"
+    },
+    "datePublished": "2026",
+    "isPartOf": {
+      "@type": "Periodical",
+      "name": "Computer Graphics Forum",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Eurographics"
+      }
+    }
+  }
+  </script>
 </head>
 
 <body>
 
-  <header>
-    <h1>Justin Benoist</h1>
+  <header class="site-header">
+    <div class="header-inner">
 
-    <nav>
-      <a href="index.html">About Me</a>
-      <a href="publications.html">Publications</a>
-    </nav>
+      <div class="header-grid">
+        <img src="imgs/me.jpg" alt="Photo of Justin Benoist" class="profile-photo">
+
+        <div class="header-text">
+          <h1>Justin Benoist</h1>
+          <p class="header-role">PhD Student in Computer Graphics</p>
+          <p class="header-affiliation">École de technologie supérieure</p>
+        </div>
+
+        <nav class="site-nav">
+          <a href="index.html" class="active">About</a>
+          <a href="publications.html">Publications</a>
+        </nav>
+      </div>
+
+    </div>
   </header>
 
-  <main>
-    <p>
-      I am a researcher interested in ...
+  <main class="about-main">
+    <h2>About Me</h2>
+    <p class="intro-text">
+      I am a PhD student in computer graphics, working on light transport
+      simulation and learning-based rendering methods. My research focuses
+      on physically-based rendering, Monte Carlo methods, and neural
+      approaches for global illumination.
     </p>
+
+    <section class="about-interests">
+      <h3>Research Interests</h3>
+      <ul>
+        <li>Physically-Based Rendering</li>
+        <li>Monte Carlo Light Transport</li>
+        <li>Photon Mapping and Caustics</li>
+        <li>Neural Rendering</li>
+        <li>High-Performance Rendering Systems</li>
+      </ul>
+    </section>
+
+    <section class="about-bio">
+      <h3>Background</h3>
+      <p>
+        I am currently a PhD student at École de Technologie Supérieure under
+        the supervision of <a href="https://profs.etsmtl.ca/agruson/">Adrien Gruson</a>. I previously studied at INSA Rouen Normandie and succesfully graduated in IT engineering.
+      </p>
+      <p>
+        My work aims to bridge physically-based models and learning-based
+        approaches while preserving consistency and interpretability.
+      </p>
+    </section>
+
+    <section class="about-cta">
+      <a href="publications.html" class="button is-dark">
+        View Publications
+      </a>
+    </section>
   </main>
 
-  <footer>
-    <p>
-      Contact: justin.benoist.1@ens.etsmtl.ca
-    </p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-name">Justin Benoist</p>
+
+      <div class="footer-icons">
+        <a href="mailto:justin.benoist.1@ens.etsmtl.ca" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/justin-benoist/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/JustinBenoist" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <p class="footer-affiliation">
+        École de technologie supérieure · Montréal
+      </p>
+      <p class="footer-license">
+         This page was built using a custom version of the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+         This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+          Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
   </footer>
 
 </body>
