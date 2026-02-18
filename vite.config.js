@@ -1,8 +1,4 @@
 // vite.config.js
-export default {
-  base: '/'
-};
-
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
