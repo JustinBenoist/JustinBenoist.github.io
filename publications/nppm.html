@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="Neural Rendering, Global Illumination, Path Tracing, Monte Carlo, Neural Progressive Photon Mapping, Photon Mapping, Computer Graphics, Eurographics 2026, ÉTS, École de Technologie Supérieure">
+  <meta name="author" content="Justin Benoist, Joey Litalien, Adrien Gruson">
+  <title>Neural Progressive Photon Mapping</title>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="../js/fontawesome.all.min.js"></script>
+  <script defer src="../js/bulma-carousel.min.js"></script>
+  <script defer src="../js/bulma-slider.min.js"></script>
+  <script defer src="../js/index.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Neural Progressive Photon Mapping",
+    "description": "Efficient kernel prediction for progressive density estimation",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Justin Benoist",
+        "url": "https://justinbenoist.github.io/"
+      },
+      {
+        "@type": "Person",
+        "name": "Joey Litalien"
+      },
+      {
+        "@type": "Person",
+        "name": "Adrien Gruson"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "École de Technologie Supérieure",
+      "url": "https://www.kit.edu"
+    },
+    "datePublished": "2026",
+    "isPartOf": {
+      "@type": "Periodical",
+      "name": "Computer Graphics Forum",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Eurographics"
+      }
+    }
+  }
+  </script>
+  <link rel="stylesheet" crossorigin href="/assets/index-D2Ht_bMO.css">
+</head>
+
+<body>
+  
+  <main>
+    <section class="hero">
+      <div class="hero-body">
+        <header class="publication-header">
+          <h1 class="publication-title">Neural Progressive Photon Mapping</h1>
+          <div class="publication-authors">
+            <p>
+              <span class="author-block"><b><a href="../index.html">Justin Benoist</a></b></span>*,
+              <span class="author-block"><b></b><a href="https://joeylitalien.com/">Joey Litalien</a></b></span>,
+              <span class="author-block"><b></b><a href="https://profs.etsmtl.ca/agruson/">Adrien Gruson</a></b></span>*
+            </p>
+          </div>
+          <div class="publication-affiliation">
+            École de Technologie Supérieure*
+          </div>
+          <div class="publication-venue">
+            <b>Eurographics, 2026 - Computer Graphics Forum</b>
+          </div>
+        </header>
+        <section>
+            <nav>
+            <div class="publication-links">
+            <a href="pdfs/Neural_Progressive_Photon_Mapping___Eurographics_2026-1.pdf" class="button is-dark is-rounded">Paper (PDF)</a>
+            <a href="https://github.com/JustinBenoist/NPPM" class="button is-dark is-rounded">Code</a>
+            <a href="" class="button is-dark is-rounded">Supplementals</a>
+            </div>
+            </nav>
+        </section>
+      </div>
+    </section>
+      
+    <section>
+      <figure class="main-figure">
+        <img src="/assets/nppm-Cc6_9Tqp.png"
+            alt="Caustics reconstruction using neural progressive photon mapping">
+        <figcaption>
+          Equal-time comparison (15 seconds) between our neural progressive photon mapping (NPPM), SPPM [HJ09] and CPPM [LLZ* 20] on the CRAB DOF scene with depth of field. The superscripts α and β respectively refer to the different radius reduction policy used by the two baseline methods, which we incorporate atop NPPM. Our technique reduces the overall bias compared to its nonneural counterparts, capturing sharper caustics on most of the scene. False color error shows the MRSE metric.
+        </figcaption>
+      </figure>
+    </section>
+    
+    <section class="abstract">
+      <div class="abstract-inner">
+        <h2 class="abstract-title">Abstract</h2>
+        <p class="abstract-body">
+          Photon density estimation is a robust solution for estimating complex light transport, such as those involving caustics and pure specular interactions. The shape and bandwidth of the density kernel are both crucial in achieving optimal performance. Recently, density kernels directly predicted by neural networks from local photon statistics have shown improved reconstruction results for small numbers of photons. The direct weight prediction approach of these methods, however, is fundamentally incompatible with consistent estimators as it does not allow for direct control over bias and variance. We address this problem by relying on a simpler yet effective analytical kernel, also inferred by a neural network. Unlike prior work, our technique supports progressive schemes by design, hence unlocking a large variety of applications such as stochastic photon mapping. Our method is fast, trivial to train and demonstrates state-of-the-art caustics reconstruction at equal-time over other photon mapping techniques.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+        </div>
+        <pre id="bibtex-code"><code>@inproceedings{Benoist:2026:NPPM,
+    title = {Neural Progressive Photon Mapping},
+    author = {Justin Benoist and
+              Joey Litalien and
+              Adrien Gruson},
+    journal = {Computer Graphics Forum},
+    year = {2026},
+    month = feb,
+    doi = {10.1111/cgf.70408}
+}
+        </code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-name">Justin Benoist</p>
+
+      <div class="footer-icons">
+        <a href="mailto:justin.benoist.1@ens.etsmtl.ca" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/justin-benoist/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/JustinBenoist" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <p class="footer-affiliation">
+        École de technologie supérieure · Montréal
+      </p>
+      <p class="footer-license">
+         This page was built using a custom version of the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+         This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+          Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

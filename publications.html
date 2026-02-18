@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="keywords" content="Neural Rendering, Global Illumination, Path Tracing, Monte Carlo, Neural Progressive Photon Mapping, Photon Mapping, Computer Graphics, Eurographics 2026, ÉTS, École de Technologie Supérieure, Justin Benoist, Benoist, Justin">
-  <title>Justin Benoist</title>
+  <title>Publications - Justin Benoist</title>
 
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -52,6 +51,19 @@
     }
   }
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".publication[data-href]").forEach(article => {
+        article.addEventListener("click", event => {
+          // Ignore clicks on actual links
+          if (event.target.closest("a")) return;
+
+          window.location.href = article.dataset.href;
+        });
+      });
+    });
+  </script>
   <script type="module" crossorigin src="/assets/main-BPdg6OvG.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-D2Ht_bMO.css">
 </head>
@@ -70,53 +82,39 @@
         </div>
 
         <nav class="site-nav">
-          <a href="index.html" class="active">About</a>
-          <a href="publications.html">Publications</a>
+          <a href="index.html">About</a>
+          <a href="publications.html" class="active">Publications</a>
         </nav>
       </div>
 
     </div>
   </header>
 
-  <div id="ocean-bg"></div>
-  
-  <main class="about-main">
+  <main class="publications-main">
+    <div id="ocean-bg"></div>
+    <h2>Publications</h2>
+    <section class="publications-list">
+      <article class="publication" data-href="publications/nppm.html">
+        <figure class="teaser">
+          <a href="publications/nppm.html">
+            <img src="/assets/nppm-teaser-DNda4r6g.jpg"
+                alt="Teaser showing caustics reconstruction result">
+          </a>
+        </figure>
+        <h3>
+          Neural Progressive Photon Mapping
+        </h3>
+        <p>
+          <strong>Justin Benoist</strong>, Joey Litalien, Adrien Gruson<br>
+          <em>EUROGRAPHICS</em>, 2026
+        </p>
+        <p>
+          <a href="https://github.com/JustinBenoist/NPPM" class="button is-rounded">Code repository</a>
+        </p>
+      </article>
 
-    <h2>About Me</h2>
-    <p class="intro-text">
-      I am a PhD student in computer graphics, working on light transport
-      simulation and learning-based rendering methods. My research focuses
-      on physically-based rendering, Monte Carlo methods, and neural
-      approaches for global illumination.
-    </p>
+      <!-- Other articles will go here -->
 
-    <section class="about-interests">
-      <h3>Research Interests</h3>
-      <ul>
-        <li>Physically-Based Rendering</li>
-        <li>Monte Carlo Light Transport</li>
-        <li>Photon Mapping and Caustics</li>
-        <li>Neural Rendering</li>
-        <li>High-Performance Rendering Systems</li>
-      </ul>
-    </section>
-
-    <section class="about-bio">
-      <h3>Background</h3>
-      <p>
-        I am currently a PhD student at École de Technologie Supérieure under
-        the supervision of <a href="https://profs.etsmtl.ca/agruson/">Adrien Gruson</a>. I previously studied at INSA Rouen Normandie and succesfully graduated in IT engineering.
-      </p>
-      <p>
-        My work aims to bridge physically-based models and learning-based
-        approaches while preserving consistency and interpretability.
-      </p>
-    </section>
-
-    <section class="about-cta">
-      <a href="publications.html" class="button is-dark">
-        View Publications
-      </a>
     </section>
   </main>
 
